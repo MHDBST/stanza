@@ -10,13 +10,13 @@ def process_file(name='train'):
             
             if i % 10000 == 0:
                 print('processing line:',i)
-            if i==45:
+            if i == 100000:
                 break
             if not line.strip():
                 continue
             if line.startswith('('):
                 new_lines=[]
-                par_count=line.count('(')
+                par_count=line.count('(') - line.count(')')
                 new_lines.append(line.strip())
                 continue
             splits_parant=line.split('(')
@@ -28,17 +28,11 @@ def process_file(name='train'):
                 pre_txt = txt + '('+splits_parant[1].strip() +' '
                 txt += '('+splits_parant[1].strip().split('-')[0] +' '
             else:
-                print('splits_parant',splits_parant)
                 pre_txt = txt + '('+splits_parant[1].strip() +' '
-                print('line>>',line+'<<<')
-                print('preee_txt>>',pre_txt,'<<')
                 
-            print('line is ', line)    
             if pre_txt.strip() == line.strip():
                 txt = pre_txt
                 
-                print('pre_txt',pre_txt)
-                print('par_count',par_count)
                 
                 splits_spc=line.strip().split(' ')
                 if len(splits_spc) > 1:
@@ -58,7 +52,6 @@ def process_file(name='train'):
                     txt=txt[:-added_par-1]
                     new_lines.append(txt)
                     par_count += txt.count('(') -  txt.count(')')
-                    print('inja count',par_count)
                     continue
                 else:
                     new_lines.append(txt)
