@@ -13,7 +13,24 @@ from stanza.models.common.vocab import PAD, PAD_ID, UNK, UNK_ID
 
 logger = logging.getLogger('stanza')
 
-SentimentDatum = namedtuple('SentimentDatum', ['sentiment', 'text'])
+class SentimentDatum:
+    def __init__(self, sentiment, text, constituency=None):
+        self.sentiment = sentiment
+        self.text = text
+        self.constituency = constituency
+
+    def __eq__(self, other):
+        if self is other:
+            return True
+        if not isinstance(other, SentimentDatum):
+            return False
+        return self.sentiment == other.sentiment and self.text == other.text and self.constituency == other.constituency
+
+    def to_json_dict(self):
+        if self.constituency is None:
+            return {'sentiment': self.sentiment, 'text': self.text}
+        else:
+            return {'sentiment': self.sentiment, 'text': self.text, 'constituency': str(self.constituency)}
 
 def update_text(sentence: List[str], wordvec_type: WVType) -> List[str]:
     """
