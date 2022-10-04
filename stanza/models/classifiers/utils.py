@@ -1,5 +1,6 @@
 from enum import Enum
-import torch
+
+from torch import nn
 
 """
 Defines some args which are common between the classifier model(s) and tools which use them
@@ -20,3 +21,17 @@ class ExtraVectors(Enum):
     NONE = 1
     CONCAT = 2
     SUM = 3
+
+def build_output_layers(fc_input_size, fc_shapes, num_classes):
+    """
+    Build a sequence of fully connected layers to go from the final conv layer to num_classes
+
+    Returns an nn.ModuleList
+    """
+    fc_layers = []
+    previous_layer_size = fc_input_size
+    for shape in fc_shapes:
+        fc_layers.append(nn.Linear(previous_layer_size, shape))
+        previous_layer_size = shape
+    fc_layers.append(nn.Linear(previous_layer_size, num_classes))
+    return nn.ModuleList(fc_layers)
