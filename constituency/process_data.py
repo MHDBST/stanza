@@ -1,7 +1,7 @@
 def process_file(name='train'):
     input_file=open('en_my_%s.mrg'%name)
     lines=input_file.readlines()
-    with open('en_out_%s.mrg'%name,'w') as f:
+    with open('en_outall_%s.mrg'%name,'w') as f:
         f.write('\n')
         new_lines=[]
         par_count=0
@@ -10,8 +10,8 @@ def process_file(name='train'):
             
             if i % 10000 == 0:
                 print('processing line:',i)
-            if i == 100000:
-                break
+            # if i == 100000:
+            #     break
             if not line.strip():
                 continue
             if line.startswith('('):
