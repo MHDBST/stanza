@@ -1,0 +1,1000 @@
+
+( (S
+    (PP (IN In) )))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) )))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '') ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) )))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) )))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) ))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) )))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) )))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) ))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) ))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) ))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) )))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) )))))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) ))) ))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,) ))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,) )))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) ))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) ))))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) )))
+      (, ,) ) ))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) )))
+      (, ,) )
+    (VP (VBD was) )))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) )))
+      (, ,) )
+    (VP (VBD was) 
+      (VP 
+        (ADVP (RB mistakenly) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) )))
+      (, ,) )
+    (VP (VBD was) 
+      (VP 
+        (ADVP (RB mistakenly) )
+        (VBN attributed) ))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) )))
+      (, ,) )
+    (VP (VBD was) 
+      (VP 
+        (ADVP (RB mistakenly) )
+        (VBN attributed)
+        (NP (-NONE- *-2) )))))
+( (S
+    (PP (IN In) 
+      (NP 
+        (NP (DT an) (NNP Oct.) (CD 19) (NN review) )
+        (PP (IN of) 
+          (NP (`` ``) 
+            (NP (DT The) (NN Misanthrope) )
+            ('' '')
+            (PP (IN at) 
+              (NP 
+                (NP (NNP Chicago) (POS 's) )
+                (NNP Goodman) (NNP Theatre) ))))
+        (PRN 
+          (-LRB- -LRB-)
+          (`` ``)
+          (S-HLN 
+            (NP (VBN Revitalized) (NNS Classics) )
+            (VP (VBP Take) 
+              (NP (DT the) (NN Stage) )
+              (PP (IN in) 
+                (NP (NNP Windy) (NNP City) ))))
+          (, ,) ('' '') 
+          (NP (NN Leisure) (CC &) (NNS Arts) )
+          (-RRB- -RRB-) )))
+    (, ,)
+    (NP-SBJ-2 
+      (NP 
+        (NP (DT the) (NN role) )
+        (PP (IN of) 
+          (NP (NNP Celimene) )))
+      (, ,)
+      (VP (VBN played) 
+        (NP (-NONE- *) )
+        (PP (IN by) 
+          (NP (NNP Kim) (NNP Cattrall) )))
+      (, ,) )
+    (VP (VBD was) 
+      (VP 
+        (ADVP (RB mistakenly) )
+        (VBN attributed)
+        (NP (-NONE- *-2) )
+        (PP (TO to) )))))
