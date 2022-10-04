@@ -76,22 +76,11 @@ class Trainer:
             raise
         logger.debug("Loaded model {}".format(filename))
 
-        # TODO: should not be needed when all models have this value set
-        setattr(checkpoint['config'], 'use_elmo', getattr(checkpoint['config'], 'use_elmo', False))
-        setattr(checkpoint['config'], 'elmo_projection', getattr(checkpoint['config'], 'elmo_projection', False))
-        setattr(checkpoint['config'], 'char_lowercase', getattr(checkpoint['config'], 'char_lowercase', False))
-        setattr(checkpoint['config'], 'charlm_projection', getattr(checkpoint['config'], 'charlm_projection', None))
-        setattr(checkpoint['config'], 'bert_model', getattr(checkpoint['config'], 'bert_model', None))
-        setattr(checkpoint['config'], 'bilstm', getattr(checkpoint['config'], 'bilstm', False))
-        setattr(checkpoint['config'], 'bilstm_hidden_dim', getattr(checkpoint['config'], 'bilstm_hidden_dim', 0))
-        setattr(checkpoint['config'], 'maxpool_width', getattr(checkpoint['config'], 'maxpool_width', 1))
-
         epochs_trained = checkpoint.get('epochs_trained', 0)
         global_step = checkpoint.get('global_step', 0)
         best_score = checkpoint.get('best_score', None)
 
-        # TODO: the getattr is not needed when all models have this baked into the config
-        model_type = getattr(checkpoint['config'], 'model_type', 'CNNClassifier')
+        model_type = checkpoint['config'].model_type
 
         pretrain = Trainer.load_pretrain(args, foundation_cache)
         elmo_model = utils.load_elmo(args.elmo_model) if args.use_elmo else None
@@ -146,17 +135,17 @@ class Trainer:
         else:
             raise RuntimeError("TODO: need to get the wv type back from get_wordvec_file")
 
-        logger.info("Looking for pretrained vectors in {}".format(pretrain_file))
+        logger.debug("Looking for pretrained vectors in {}".format(pretrain_file))
         if os.path.exists(pretrain_file):
             return load_pretrain(pretrain_file, foundation_cache)
         elif args.wordvec_raw_file:
             vec_file = args.wordvec_raw_file
-            logger.info("Pretrain not found.  Looking in {}".format(vec_file))
+            logger.debug("Pretrain not found.  Looking in {}".format(vec_file))
         else:
             vec_file = utils.get_wordvec_file(args.wordvec_dir, args.shorthand, args.wordvec_type.name.lower())
-            logger.info("Pretrain not found.  Looking in {}".format(vec_file))
+            logger.debug("Pretrain not found.  Looking in {}".format(vec_file))
         pretrain = Pretrain(pretrain_file, vec_file, args.pretrain_max_vocab)
-        logger.info("Embedding shape: %s" % str(pretrain.emb.shape))
+        logger.debug("Embedding shape: %s" % str(pretrain.emb.shape))
         return pretrain
 
 

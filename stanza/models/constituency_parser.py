@@ -134,7 +134,7 @@ from stanza import Pipeline
 from stanza.models.common import utils
 from stanza.models.common.vocab import VOCAB_PREFIX
 from stanza.models.constituency import trainer
-from stanza.models.constituency.lstm_model import ConstituencyComposition, SentenceBoundary
+from stanza.models.constituency.lstm_model import ConstituencyComposition, SentenceBoundary, StackHistory
 from stanza.models.constituency.parse_transitions import TransitionScheme
 from stanza.models.constituency.utils import DEFAULT_LEARNING_EPS, DEFAULT_LEARNING_RATES, DEFAULT_MOMENTUM, DEFAULT_LEARNING_RHO, DEFAULT_WEIGHT_DECAY, NONLINEARITY
 
@@ -161,6 +161,8 @@ def parse_args(args=None):
     # for VI, for example, use vinai/phobert-base
     parser.add_argument('--bert_model', type=str, default=None, help="Use an external bert model (requires the transformers package)")
     parser.add_argument('--no_bert_model', dest='bert_model', action="store_const", const=None, help="Don't use bert")
+    parser.add_argument('--bert_hidden_layers', type=int, default=4, help="How many layers of hidden state to use from the transformer")
+    parser.add_argument('--bert_hidden_layers_original', action='store_const', const=None, dest='bert_hidden_layers', help='Use layers 2,3,4 of the Bert embedding')
 
     parser.add_argument('--tag_embedding_dim', type=int, default=20, help="Embedding size for a tag.  0 turns off the feature")
     # Smaller values also seem to work
@@ -185,6 +187,14 @@ def parse_args(args=None):
 
     parser.add_argument('--transition_embedding_dim', type=int, default=20, help="Embedding size for a transition")
     parser.add_argument('--transition_hidden_size', type=int, default=20, help="Embedding size for transition stack")
+    parser.add_argument('--transition_stack', default=StackHistory.LSTM, type=lambda x: StackHistory[x.upper()],
+                        help='How to track transitions over a parse.  {}'.format(", ".join(x.name for x in StackHistory)))
+    parser.add_argument('--transition_heads', default=4, type=int, help="How many heads to use in MHA *if* the transition_stack is Attention")
+
+    parser.add_argument('--constituent_stack', default=StackHistory.LSTM, type=lambda x: StackHistory[x.upper()],
+                        help='How to track transitions over a parse.  {}'.format(", ".join(x.name for x in StackHistory)))
+    parser.add_argument('--constituent_heads', default=8, type=int, help="How many heads to use in MHA *if* the transition_stack is Attention")
+
     # larger was more effective, up to a point
     # substantially smaller, such as 128,
     # is fine if bert & charlm are not available
@@ -365,6 +375,7 @@ def parse_args(args=None):
     parser.add_argument('--tag_unknown_frequency', default=0.001, type=float, help='How often to replace a tag with UNK when training')
 
     parser.add_argument('--num_lstm_layers', default=2, type=int, help='How many layers to use in the LSTMs')
+    parser.add_argument('--num_tree_lstm_layers', default=None, type=int, help='How many layers to use in the TREE_LSTMs, if used.  This also increases the width of the word outputs to match the tree lstm inputs.  Default 2 if TREE_LSTM or TREE_LSTM_CX, 1 otherwise')
     parser.add_argument('--num_output_layers', default=3, type=int, help='How many layers to use at the prediction level')
 
     parser.add_argument('--sentence_boundary_vectors', default=SentenceBoundary.EVERYTHING, type=lambda x: SentenceBoundary[x.upper()],
@@ -381,6 +392,7 @@ def parse_args(args=None):
 
     parser.add_argument('--retag_package', default="default", help='Which tagger shortname to use when retagging trees.  None for no retagging.  Retagging is recommended, as gold tags will not be available at pipeline time')
     parser.add_argument('--retag_method', default='xpos', choices=['xpos', 'upos'], help='Which tags to use when retagging')
+    parser.add_argument('--retag_model_path', default=None, help='Path to a retag POS model to use.  Will use a downloaded Stanza model by default')
     parser.add_argument('--no_retag', dest='retag_package', action="store_const", const=None, help="Don't retag the trees")
 
     # Partitioned Attention
@@ -438,6 +450,12 @@ def parse_args(args=None):
     if args.weight_decay is None:
         args.weight_decay = DEFAULT_WEIGHT_DECAY.get(args.optim.lower(), None)
 
+    if args.num_tree_lstm_layers is None:
+        if args.constituency_composition in (ConstituencyComposition.TREE_LSTM, ConstituencyComposition.TREE_LSTM_CX):
+            args.num_tree_lstm_layers = 2
+        else:
+            args.num_tree_lstm_layers = 1
+
     if args.wandb_name or args.wandb_norm_regex:
         args.wandb = True
 
@@ -455,7 +473,9 @@ def parse_args(args=None):
     if args['checkpoint']:
         args['checkpoint_save_name'] = utils.checkpoint_name(args['save_dir'], model_save_file, args['checkpoint_save_name'])
 
-    model_save_file = os.path.join(args['save_dir'], model_save_file)
+    model_dir = os.path.split(model_save_file)[0]
+    if model_dir != args['save_dir']:
+        model_save_file = os.path.join(args['save_dir'], model_save_file)
     args['save_name'] = model_save_file
 
     return args
@@ -496,7 +516,14 @@ def main(args=None):
         else:
             lang = args['lang']
             package = args['retag_package']
-        retag_pipeline = Pipeline(lang=lang, processors="tokenize, pos", tokenize_pretokenized=True, pos_package=package, pos_tqdm=True)
+        retag_args = {"lang": lang,
+                      "processors": "tokenize, pos",
+                      "tokenize_pretokenized": True,
+                      "package": {"pos": package},
+                      "pos_tqdm": True}
+        if args['retag_model_path'] is not None:
+            retag_args['pos_model_path'] = args['retag_model_path']
+        retag_pipeline = Pipeline(**retag_args)
         if args['retag_xpos'] and len(retag_pipeline.processors['pos'].vocab['xpos']) == len(VOCAB_PREFIX):
             logger.warning("XPOS for the %s tagger is empty.  Switching to UPOS", package)
             args['retag_xpos'] = False

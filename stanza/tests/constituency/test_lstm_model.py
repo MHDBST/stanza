@@ -17,6 +17,7 @@ def pretrain_file():
     return f'{TEST_WORKING_DIR}/in/tiny_emb.pt'
 
 def build_model(pretrain_file, *args):
+    args = ['--pattn_d_model', '256', '--hidden_size', '128'] + list(args)
     trainer = build_trainer(pretrain_file, *args)
     return trainer.model
 
@@ -202,6 +203,12 @@ def test_forward_constituency_composition(pretrain_file):
     model = build_model(pretrain_file, '--constituency_composition', 'bilstm_max')
     run_forward_checks(model, num_states=2)
 
+    model = build_model(pretrain_file, '--constituency_composition', 'tree_lstm')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file, '--constituency_composition', 'tree_lstm_cx')
+    run_forward_checks(model)
+
     model = build_model(pretrain_file, '--constituency_composition', 'bigram')
     run_forward_checks(model, num_states=2)
 
@@ -250,7 +257,7 @@ def test_lattn_projection(pretrain_file):
     """
     with pytest.raises(ValueError):
         # this is too small
-        model = build_model(pretrain_file, '--lattn_d_proj', '64', '--lattn_d_l', '16', '--lattn_d_input_proj', '256')
+        model = build_model(pretrain_file, '--pattn_d_model', '1024', '--lattn_d_proj', '64', '--lattn_d_l', '16', '--lattn_d_input_proj', '256')
         run_forward_checks(model)
 
     model = build_model(pretrain_file, '--lattn_d_proj', '64', '--lattn_d_l', '16', '--lattn_d_input_proj', '768')
@@ -269,6 +276,107 @@ def test_forward_timing_choices(pretrain_file):
     run_forward_checks(model)
 
     model = build_model(pretrain_file, '--pattn_num_heads', '4', '--pattn_num_layers', '4', '--pattn_timing', 'learned')
+    run_forward_checks(model)
+
+def test_transition_stack(pretrain_file):
+    """
+    Test different transition stack types: lstm & attention
+    """
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_stack', 'attn', '--transition_heads', '1')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_stack', 'attn', '--transition_heads', '4')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_stack', 'lstm')
+    run_forward_checks(model)
+
+def test_constituent_stack(pretrain_file):
+    """
+    Test different constituent stack types: lstm & attention
+    """
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--constituent_stack', 'attn', '--constituent_heads', '1')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--constituent_stack', 'attn', '--constituent_heads', '4')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--constituent_stack', 'lstm')
+    run_forward_checks(model)
+
+def test_different_transition_sizes(pretrain_file):
+    """
+    If the transition hidden size and embedding size are different, the model should still work
+    """
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_embedding_dim', '10', '--transition_hidden_size', '10',
+                        '--sentence_boundary_vectors', 'everything')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_embedding_dim', '20', '--transition_hidden_size', '10',
+                        '--sentence_boundary_vectors', 'everything')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_embedding_dim', '10', '--transition_hidden_size', '20',
+                        '--sentence_boundary_vectors', 'everything')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_embedding_dim', '10', '--transition_hidden_size', '10',
+                        '--sentence_boundary_vectors', 'none')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_embedding_dim', '20', '--transition_hidden_size', '10',
+                        '--sentence_boundary_vectors', 'none')
+    run_forward_checks(model)
+
+    model = build_model(pretrain_file,
+                        '--pattn_num_layers', '0', '--lattn_d_proj', '0',
+                        '--transition_embedding_dim', '10', '--transition_hidden_size', '20',
+                        '--sentence_boundary_vectors', 'none')
+    run_forward_checks(model)
+
+
+def test_lstm_tree_forward(pretrain_file):
+    """
+    Test the LSTM_TREE forward pass
+    """
+    model = build_model(pretrain_file, '--num_tree_lstm_layers', '1', '--constituency_composition', 'tree_lstm')
+    run_forward_checks(model)
+    model = build_model(pretrain_file, '--num_tree_lstm_layers', '2', '--constituency_composition', 'tree_lstm')
+    run_forward_checks(model)
+    model = build_model(pretrain_file, '--num_tree_lstm_layers', '3', '--constituency_composition', 'tree_lstm')
+    run_forward_checks(model)
+
+def test_lstm_tree_cx_forward(pretrain_file):
+    """
+    Test the LSTM_TREE_CX forward pass
+    """
+    model = build_model(pretrain_file, '--num_tree_lstm_layers', '1', '--constituency_composition', 'tree_lstm_cx')
+    run_forward_checks(model)
+    model = build_model(pretrain_file, '--num_tree_lstm_layers', '2', '--constituency_composition', 'tree_lstm_cx')
+    run_forward_checks(model)
+    model = build_model(pretrain_file, '--num_tree_lstm_layers', '3', '--constituency_composition', 'tree_lstm_cx')
     run_forward_checks(model)
 
 def check_structure_test(pretrain_file, args1, args2):
@@ -308,11 +416,12 @@ def check_structure_test(pretrain_file, args1, args2):
     for i, j in zip(other_states[0].word_queue, model_states[0].word_queue):
         assert torch.allclose(i.hx, j.hx)
     for i, j in zip(other_states[0].transitions, model_states[0].transitions):
-        assert torch.allclose(i.output, j.output)
         assert torch.allclose(i.lstm_hx, j.lstm_hx)
         assert torch.allclose(i.lstm_cx, j.lstm_cx)
     for i, j in zip(other_states[0].constituents, model_states[0].constituents):
-        assert torch.allclose(i.tree_hx, j.tree_hx)
+        assert (i.value is None) == (j.value is None)
+        if i.value is not None:
+            assert torch.allclose(i.value.tree_hx, j.value.tree_hx)
         assert torch.allclose(i.lstm_hx, j.lstm_hx)
         assert torch.allclose(i.lstm_cx, j.lstm_cx)
 

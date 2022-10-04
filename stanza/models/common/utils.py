@@ -2,6 +2,7 @@
 Utility functions.
 """
 
+import argparse
 from collections import Counter
 from contextlib import contextmanager
 import gzip
@@ -161,11 +162,6 @@ def flatten_indices(seq_lens, width):
         for j in range(l):
             flat.append(i * width + j)
     return flat
-
-def set_cuda(var, cuda):
-    if cuda:
-        return var.cuda()
-    return var
 
 def keep_partial_grad(grad, topk):
     """
@@ -439,3 +435,12 @@ def load_elmo(elmo_model):
     elmo_model = elmoformanylangs.Embedder(elmo_model)
     return elmo_model
 
+def log_training_args(args, args_logger):
+    """
+    For record keeping purposes, log the arguments when training
+    """
+    if isinstance(args, argparse.Namespace):
+        args = vars(args)
+    keys = sorted(args.keys())
+    log_lines = ['%s: %s' % (k, args[k]) for k in keys]
+    args_logger.info('ARGS USED AT TRAINING TIME:\n%s\n', '\n'.join(log_lines))
